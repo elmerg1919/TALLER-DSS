@@ -8,13 +8,12 @@
   <title>Ingreso de Datos</title>
 </head>
 <body>
-  <section class="form-register" action="proceso.php" method="POST">
+  <form class="form-register" action="proceso.php" method="POST">
     <h4>Formulario Ingreso de Datos</h4>
-    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-    <input class="controls" type="number" name="calificacion" id="calificacion" placeholder="Ingrese su Calificacion">
-    <input class="botons" type="submit" value="Enviar">
-  </section>
-
+    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required>
+    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido" required>
+    <input class="controls" type="number" name="calificacion" id="calificacion" placeholder="Ingrese su Calificacion" required>
+    <input class="botons" type="submit" value="Enviar" name="enviar">
+  </form>
 </body>
 </html>
