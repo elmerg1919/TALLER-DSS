@@ -14,6 +14,11 @@ function Header()
     $this->Cell(90,10,'LISTA DE ESTUDIANTES',1,0,'C');
     // Salto de línea
     $this->Ln(20);
+
+    $this->Cell(20, 10, 'ID',1,0,'C',0);
+    $this->Cell(60, 10, 'Nombre',1,0,'C',0);
+    $this->Cell(60, 10, 'Apellido',1,0,'C',0);
+    $this->Cell(50, 10, 'Calificacion_Al',1,1,'C',0);
 }
 
 // Pie de página
@@ -38,10 +43,10 @@ $pdf->AddPage();
 $pdf->SetFont('Arial','B',16);
 
 while($row=$resultado->fetch_assoc()){
-    $pdf->Cell(90, 10, $row['Id_Alumno'],1,0,'C',0);
-    $pdf->Cell(90, 10, $row['Nombre_Al'],1,0,'C',0);
-    $pdf->Cell(90, 10, $row['Apellido'],1,0,'C',0);
-    $pdf->Cell(90, 10, $row['Calificacion_Al'],1,1,'C',0);
+    $pdf->Cell(20, 10, $row['Id_Alumno'],1,0,'C',0);
+    $pdf->Cell(60, 10, $row['Nombre_Al'],1,0,'C',0);
+    $pdf->Cell(60, 10, $row['Apellido'],1,0,'C',0);
+    $pdf->Cell(50, 10, $row['Calificacion_Al'],1,1,'C',0);
 }
 
 $pdf->Output();
